@@ -1,0 +1,473 @@
+:root {
+    --primary: #8e44ad;
+    /* Ungu */
+    --primary-dark: #732d91;
+    --secondary: #3498db;
+    /* Biru */
+    --accent: #e74c3c;
+    --light: #f8f9fa;
+    --dark: #2c3e50;
+    --gradient-start: #8e44ad;
+    --gradient-end: #3498db;
+
+    /* Menambahkan variabel untuk warna teks di navbar agar konsisten */
+    --navbar-brand-text-color: var(--primary);
+    /* Warna teks ITKA */
+    --navbar-link-color: var(--dark);
+    --navbar-link-hover-bg: var(--primary);
+    --navbar-link-hover-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 10px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    /* Menggunakan flexbox untuk penataan logo dan teks */
+    align-items: center;
+    /* Pusatkan secara vertikal */
+    font-weight: 700;
+    font-size: 1.8rem;
+    /* Mengambil dari yang sudah ada */
+    color: var(--navbar-brand-text-color) !important;
+    /* Menggunakan variabel warna */
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    /* Pastikan tidak ada underline */
+}
+
+.navbar-logo {
+    height: 40px;
+    /* Tinggi logo, sesuaikan agar pas dengan teks */
+    width: auto;
+    /* Jaga aspek rasio */
+    margin-right: 10px;
+    /* Jarak antara logo dan teks, Bootstrap 'me-2' setara dengan ~0.5rem */
+    vertical-align: middle;
+    /* Pastikan logo sejajar tengah dengan teks */
+    /* filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1)); */
+    /* Opsional: beri sedikit shadow pada logo */
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--navbar-link-color);
+    /* Menggunakan variabel */
+    padding: 8px 15px;
+    border-radius: 30px;
+    margin: 0 3px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background: var(--navbar-link-hover-bg);
+    /* Menggunakan variabel */
+    color: var(--navbar-link-hover-color);
+    /* Menggunakan variabel */
+}
+
+.login-btn {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: white !important;
+    border-radius: 30px;
+    padding: 8px 20px !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3);
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(142, 68, 173, 0.4);
+}
+
+/* Responsive adjustments for Navbar Brand */
+@media (max-width: 991.98px) {
+
+    /* Untuk tampilan mobile/tablet */
+    .navbar-brand {
+        font-size: 1.6rem;
+        /* Sedikit lebih kecil di mobile */
+    }
+
+    .navbar-logo {
+        height: 35px;
+        /* Sesuaikan ukuran logo di mobile */
+    }
+
+    /* Jika Anda ingin mengubah warna teks navbar di mobile (saat background transparan) */
+    .navbar-collapse.bg-lg-transparent .nav-link {
+        color: var(--dark);
+        /* Atau warna yang lebih cocok saat menu terbuka */
+    }
+}
+
+/* ... CSS lainnya tetap sama ... */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(142, 68, 173, 0.9), rgba(52, 152, 219, 0.85)),
+        url("/image/itka gedung.jpeg") center/cover no-repeat;
+    padding: 180px 0 100px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f8f9fa' fill-opacity='1' d='M0,224L48,218.7C96,213,192,203,288,181.3C384,160,480,128,576,138.7C672,149,768,203,864,213.3C960,224,1056,192,1152,165.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") bottom/cover no-repeat;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.5px;
+}
+
+.hero h4 {
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 25px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn {
+    background: white;
+    color: var(--primary);
+    font-weight: 600;
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Styling */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    position: relative;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-title:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    border-radius: 10px;
+}
+
+/* Card Styling */
+.info-card,
+.alur-card,
+.testi-card,
+.contact-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background: white;
+    height: 100%;
+}
+
+.info-card:hover,
+.alur-card:hover,
+.testi-card:hover,
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.info-card {
+    border-top: 4px solid var(--primary);
+}
+
+.info-card ul {
+    padding-left: 20px;
+}
+
+.info-card ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.info-card ul li:before {
+    content: "✓";
+    color: var(--primary);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Alur Cards */
+.alur-card {
+    border-top: 4px solid var(--secondary);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.alur-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--secondary), #2c82c9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 30px;
+}
+
+/* Testimoni Cards */
+.testi-card {
+    border-top: 4px solid var(--accent);
+    padding: 30px;
+    text-align: center;
+}
+
+.testi-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    border: 4px solid #f0f0f0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testi-card p {
+    font-style: italic;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.testi-card p:before,
+.testi-card p:after {
+    content: "";
+    font-size: 40px;
+    color: var(--accent);
+    opacity: 0.2;
+    position: absolute;
+}
+
+.testi-card p:before {
+    top: -15px;
+    left: -10px;
+}
+
+.testi-card p:after {
+    bottom: -25px;
+    right: -10px;
+}
+
+/* Contact Section */
+.contact-card {
+    border-top: 4px solid #2ecc71;
+    padding: 30px;
+}
+
+.contact-card li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.contact-card li:last-child {
+    border-bottom: none;
+}
+
+.contact-card li i {
+    width: 40px;
+    height: 40px;
+    background: #f0f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: var(--primary);
+}
+
+/* Footer Styling */
+.footer-main {
+    background: linear-gradient(135deg, var(--dark), #1a252f);
+    color: white;
+    padding: 70px 0 30px;
+}
+
+.footer-main .footer-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 0 8px;
+}
+
+.footer-main .footer-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.footer-social:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+.animate-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.animate-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero {
+        padding: 150px 0 80px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h4 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 130px 0 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h4 {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.98);
+        /* Background menu saat dibuka di mobile */
+        border-radius: 8px;
+        margin-top: 10px;
+        padding: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-nav {
+        align-items: flex-start;
+        /* Mengatur item navigasi di mobile */
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+        /* Jarak antar item menu di mobile */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 15px;
+        margin: 0;
+    }
+
+    .navbar-nav .dropdown-menu {
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        margin-top: 5px;
+    }
+
+    .navbar-nav .dropdown-item {
+        padding: 8px 25px;
+    }
+}
