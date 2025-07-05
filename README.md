@@ -54,6 +54,85 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
 ## Code of Conduct
+# 🛡️ Sistem Informasi Pengajuan Kekerasan Seksual
+
+Sistem ini bertujuan untuk membantu civitas akademika dalam **melaporkan, memantau, dan mengelola kasus kekerasan seksual** secara aman, cepat, dan terdokumentasi. Dibangun menggunakan **Laravel 10** untuk backend dan **React.js (Vite)** untuk frontend.
+
+---
+
+## 📦 Fitur Utama
+
+- ✅ Form pengajuan laporan kekerasan seksual
+- ✅ Login dan Dashboard Admin (dengan tampilan mirip AdminLTE)
+- ✅ Tampilan Beranda, Tentang Kekerasan Seksual, dan Kontak Darurat
+- ✅ Notifikasi pengajuan (planned)
+- ✅ Upload bukti dokumentasi (optional)
+- ✅ Statistik laporan (planned)
+
+---
+
+## 🧱 Teknologi yang Digunakan
+
+| Layer        | Stack                     |
+|--------------|---------------------------|
+| Backend      | Laravel 10, MySQL         |
+| Frontend     | React.js (Vite), Tailwind |
+| Template UI  | AdminLTE / Custom Blade   |
+| Database     | MySQL / MariaDB           |
+| Tools        | Composer, NPM, Git        |
+
+---
+
+## 🚀 Instalasi Project
+
+### 📁 1. Clone Repositori
+
+```bash
+git clone https://github.com/Ahmadskylord/sistem-informasi-pengajuan-kekerasan-seksual.git
+cd sistem-informasi-pengajuan-kekerasan-seksual
+composer install
+⚙️ Setup Backend Laravel
+2. Install Dependency
+bash
+Salin
+Edit
+composer install
+3. Salin dan Konfigurasi .env
+bash
+Salin
+Edit
+cp .env.example .env
+Edit isi .env:
+
+env
+Salin
+Edit
+APP_NAME=SIPKS
+APP_URL=http://localhost:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sipks_db
+DB_USERNAME=root
+DB_PASSWORD=
+Buat database sipks_db di phpMyAdmin atau lewat terminal.
+
+4. Generate App Key
+bash
+Salin
+Edit
+php artisan key:generate
+5. Jalankan Migrasi dan Seeder
+bash
+Salin
+Edit
+php artisan migrate --seed
+6. Jalankan Server Laravel
+bash
+Salin
+Edit
+php artisan serve
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
