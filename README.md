@@ -52,6 +52,7 @@ Dibangun menggunakan **Laravel 10** untuk backend dan **React.js (Vite)** untuk 
 
 ---
 
+
 # 🚀 Instalasi
 
 Langkah-langkah untuk menginstal dan menjalankan proyek Laravel ini di komputer lokal:
