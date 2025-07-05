@@ -57,5 +57,9 @@ Dibangun menggunakan **Laravel 10** untuk backend dan **React.js (Vite)** untuk 
 ### 1. Clone Project
 
 ```bash
-git clone https://github.com/Ahmadskylord/sistem-informasi-pengajuan-kekerasan-seksual.git
+git clone https://github.com/Ahmadskylord/sis
+tem-informasi-pengajuan-kekerasan-seksual.git
 cd sistem-informasi-pengajuan-kekerasan-seksual
+---
+## 🚀 Instalasi Install Dependency
+composer install
