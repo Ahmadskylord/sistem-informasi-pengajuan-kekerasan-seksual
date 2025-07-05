@@ -52,14 +52,17 @@ Dibangun menggunakan **Laravel 10** untuk backend dan **React.js (Vite)** untuk 
 
 ---
 
-## 🚀 Instalasi Laravel Backend
+# 🚀 Instalasi
 
-### 1. Clone Project
+Langkah-langkah untuk menginstal dan menjalankan proyek Laravel ini di komputer lokal:
+
+---
+
+## 1. Clone project atau download
 
 ```bash
-git clone https://github.com/Ahmadskylord/sis
-tem-informasi-pengajuan-kekerasan-seksual.git
+git clone https://github.com/Ahmadskylord/sistem-informasi-pengajuan-kekerasan-seksual.git
 cd sistem-informasi-pengajuan-kekerasan-seksual
----
-## 🚀 Instalasi Install Dependency
+npm install
 composer install
+cp .env.example .env
